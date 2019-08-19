@@ -14,7 +14,6 @@ function clickedon(smiley){
   if(smiley=="g")
     result_p.innerHTML="Hello World!";
   }
-}
 function main(){
 good_div.addEventListener('click', function(){
   clickedon("g");
