@@ -1,0 +1,55 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: white ;
+}
+header{
+  background: white;
+}
+header > h1 {
+  color: #255272E;
+  text-align: center;
+  font-family: Asap, sans-serif;
+}
+body > p {
+  color: #255272E;
+  text-align: center;
+  font-family: Asap, sans-serif;
+}
+
+.badge{
+  background: blue;
+  color: white;
+  font-size: 14px;
+  padding: 2px 10px;
+  font-family: Asap, sans-serif;
+}
+
+.result{
+  font-size: 48px;
+  color: white;
+}
+.result > p{
+  text-align: center;
+  font-weight: bold;
+  font-family: Asap, sans-serif;
+}
+.choices{
+  margin: 58px 0;
+  text-align: center;
+}
+.choice{
+  border: 4px solid white;
+  display: inline-block;
+}
+#action-message{
+text-align: center;
+color: white;
+font-family: Asap, sans-serif;
+font-weight: bold;
+font-size: 20px;
+
+}

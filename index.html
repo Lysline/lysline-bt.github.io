@@ -1,0 +1,31 @@
+<!-- Inpired by: https://www.youtube.com/watch?v=jaVNP3nIAv0-->
+<!--Autor: Lysline Tchounda-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Hello_World</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="images" sizes="192x192" href="My_icon_192x192">
+  </head>
+  <body>
+    <header>
+      <h1>Welcome</h1>
+    </header>
+    <div class="choices">
+      <div class="choice" id="g">
+        <img src="images/good.jpg" alt="">
+      </div>
+    </div>
+    <p>Click on the smiley!</p>
+    <script src="app.js" charset="utf-8"></script>
+  </body>
+
+  <script>
+    if(navigator.serviceWorker){
+      navigator.serviceWorker.register('serviceworker.js');
+    }
+
+</script>
+
+</html>
