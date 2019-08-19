@@ -1,6 +1,6 @@
 {
   "short_name": "PWA-H.W.",
-  "name": "My_First_PWA",
+  "name": "Lys_PWA",
   "theme_color": "#64b4fe",
   "background_color": "blue",
   "display": "standalone",
@@ -11,7 +11,7 @@
      "src": "https://user-images.githubusercontent.com/50519206/63285137-6623c480-c2b5-11e9-870b-e2fc77468c5a.png",
      "sizes": "512x512",
      "type": "image/png"
-   }
+   },
     {
      "src": "https://user-images.githubusercontent.com/50519206/63285043-278e0a00-c2b5-11e9-9821-60f189bf66a2.png",
      "sizes": "192x192",
