@@ -1,21 +1,17 @@
 {
-  "short_name": "PWA-H.W.",
-  "name": "Lys_PWA",
+  "short_name": "My_First_PWA",
+  "name": "My_First_PWA",
   "theme_color": "#64b4fe",
   "background_color": "blue",
   "display": "standalone",
   "scope": "/",
   "start_url": "/index.html",
   "icons": [
-     {
-     "src": "https://user-images.githubusercontent.com/50519206/63285137-6623c480-c2b5-11e9-870b-e2fc77468c5a.png",
-     "sizes": "512x512",
-     "type": "image/png"
-   },
     {
-     "src": "https://user-images.githubusercontent.com/50519206/63285043-278e0a00-c2b5-11e9-9821-60f189bf66a2.png",
-     "sizes": "192x192",
+     "src": "images/My_icon_192x192.png",
+     "sizes": "192x192 144x144 64x64 32x32 24x24 16x16",
      "type": "image/png"
    }
   ]
 }
+
