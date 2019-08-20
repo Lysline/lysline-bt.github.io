@@ -1,4 +1,6 @@
 // http://www.jomendez.com/2018/06/05/add-home-screen-pwas/
+
+
 let deferredPrompt;
  
 window.addEventListener('beforeinstallprompt', (e) => {
@@ -37,17 +39,4 @@ if('serviceWorker' in navigator){
   .catch(err => console.log('Service Worker error'))
 })
 }
-const result_p = document.querySelector(".result>p");
-const good_div = document.getElementById("g");
-
-function clickedon(smiley){
-  if(smiley=="g")
-    result_p.innerHTML="Hello World!";
-  }
-function main(){
-good_div.addEventListener('click', function(){
-  clickedon("g");
-})
-}
 main();
-//);}
