@@ -1,10 +1,10 @@
 <script>
-var buttonstate=1;
-function onoff(element)
+var buttonstate2=1;
+function onoff2(element)
 {
-  buttonstate= buttonstate - 1;
+  buttonstate2= buttonstate2 - 1;
   var blabel;
-  if(buttonstate)
+  if(buttonstate2)
   {
     blabel="on";
   }
