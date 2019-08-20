@@ -16,7 +16,10 @@
     <link rel="images" sizes="192x192" href="My_icon_192x192">
   <script>
 function myFunction(x) {
-  document.getElementById("moi").innerHTML = "off";
+  document.getElementById("moi").innerHTML = "Off";
+}
+   function myFunction2(x) {
+  document.getElementById("toi").innerHTML = "On";
 }
 </script>
   </head>
@@ -37,7 +40,8 @@ function myFunction(x) {
     </div>
    <form>
     <button type="button" onclick="myFunction()" id = "moi">On</button>
-    <button type="button">Get Temperature</button>
+    <button type="button" onclick="myFunction2()" id = "toi">Off</button>
+    <button type="button">Get Temp</button>
     <br>
     <br>
      <label for="temp">value:
