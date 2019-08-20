@@ -24,6 +24,12 @@ body > form {
   text-align: center;
   font-family: Asap, sans-serif;
 }
+body > menuitem {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 60px;
+} 
 
 .badge{
   background: blue;
