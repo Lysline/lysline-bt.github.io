@@ -15,22 +15,12 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="images" sizes="192x192" href="My_icon_192x192">
   <script>
-    var buttonstate=0;
 function onoff(element) {
-//document.getElementById("moi").innerHTML = "Off";
-  buttonstate= 1 - buttonstate;
-  var blabel;
-  if(buttonstate)
+document.getElementById("moi").innerHTML = "Off";
+  if(document.getElementById("moi").innerHTML == "Off")
   {
-    blabel="on";
+   document.getElementById("moi").innerHTML = "On";
   }
-  else
-  {
-    blabel="off";
-  }
-  var child=element.firstChild;
-  child.innerHTML=blabel;
-}
 }
 </script>
   </head>
@@ -47,7 +37,7 @@ function onoff(element) {
     <br>
     <br>
    <form>
-    <button class="onoff" onclick="onoff(this)"><div>off</div></button>
+    <button class="onoff" onclick="onoff(this)"> id = "moi"<div>On</div></button>
     <button type="button">Get Temperature</button>
     <br>
     <br>
