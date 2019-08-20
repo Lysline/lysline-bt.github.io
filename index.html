@@ -18,6 +18,13 @@
   <body>
     <header>
       <h1>Welcome</h1>
+     <button type="menu" menu="popup-menu">MENU</button>
+     <menu type="context" id="popup-menu">
+      <menuitem>motor</menuitem>
+     <menuitem>Temperature</menuitem>
+     <menuitem>light</menuitem>
+     <menuitem>pression</menuitem>
+     </menu>
     </header>
     <div class="choices">
       <div class="choice" id="g">
@@ -27,6 +34,7 @@
    <form>
     <button type="button">On</button>
     <input type="button" value="Get temperature in °C" onclick="25">
+    <p>25</p>
    </form>
     <script src="app.js" charset="utf-8"></script>
   </body>
