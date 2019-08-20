@@ -19,6 +19,11 @@ body > p {
   text-align: center;
   font-family: Asap, sans-serif;
 }
+body > form {
+  color: #255272E;
+  text-align: center;
+  font-family: Asap, sans-serif;
+}
 
 .badge{
   background: blue;
