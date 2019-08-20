@@ -24,14 +24,25 @@ body > form {
   text-align: center;
   font-family: Asap, sans-serif;
 }
-body > menu > menuitem {
-  display: inline;
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 60px;
-  border: 1px solid #555;
-} 
+  overflow: hidden;
+  background-color: #ff11;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 body > form > button{
   width: 60px;
 }
