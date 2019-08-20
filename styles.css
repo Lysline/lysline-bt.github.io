@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+*button{
+  font-size: 24px;
+  padding: 16px;
+}
 body{
   background: white ;
 }
@@ -44,10 +48,6 @@ body > ul > li a {
   padding: 14px 16px;
   text-decoration: none;
 }
-body > form > button{
-  width: 60px;
-}
-
 .badge{
   background: blue;
   color: white;
