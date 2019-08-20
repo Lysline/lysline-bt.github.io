@@ -15,10 +15,10 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="images" sizes="192x192" href="My_icon_192x192">
   <script>
-    var buttonstate=1;
+    var buttonstate=0;
 function onoff(element) {
 //document.getElementById("moi").innerHTML = "Off";
-  buttonstate= buttonstate - 1;
+  buttonstate= 1 - buttonstate;
   var blabel;
   if(buttonstate)
   {
@@ -47,13 +47,14 @@ function onoff(element) {
     <br>
     <br>
    <form>
-    <button class="onoff" onclick="onoff(this)"><div>On</div></button>
-    <button type="button">Get Temp</button>
+    <button class="onoff" onclick="onoff(this)"><div>off</div></button>
+    <button type="button">Get Temperature</button>
     <br>
     <br>
      <label for="temp">value:
     <input id="temp" name="temp">
    </label>
+    <p>°C</p>
    </form>
     <script src="app.js" charset="utf-8"></script>
    <script src="javascript.js" charset="utf-8"></script>
