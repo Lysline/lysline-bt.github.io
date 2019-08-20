@@ -24,7 +24,8 @@ body > form {
   text-align: center;
   font-family: Asap, sans-serif;
 }
-body > menuitem {
+body > menu > menuitem {
+  display: inline;
   list-style-type: none;
   margin: 0;
   padding: 0;
