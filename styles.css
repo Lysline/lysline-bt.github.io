@@ -3,10 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-*button{
-  font-size: 24px;
-  padding: 16px;
-}
 body{
   background: white ;
 }
@@ -28,13 +24,17 @@ body > form {
   text-align: center;
   font-family: Asap, sans-serif;
 }
+body > form > button{
+  font-size: 24px;
+  padding: 16px;
+}
 
 body > ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #0011;
+  background-color: black;
 }
 
 body > ul > li {
@@ -45,7 +45,7 @@ body > ul > li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 10px 14px;
   text-decoration: none;
 }
 .badge{
