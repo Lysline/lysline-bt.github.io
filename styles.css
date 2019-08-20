@@ -24,7 +24,7 @@ body > form {
   text-align: center;
   font-family: Asap, sans-serif;
 }
-ul {
+body > ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -32,11 +32,11 @@ ul {
   background-color: #ff11;
 }
 
-li {
+body > ul > li {
   float: left;
 }
 
-li a {
+body > ul > li a {
   display: block;
   color: white;
   text-align: center;
