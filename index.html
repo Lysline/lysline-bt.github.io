@@ -15,9 +15,22 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="images" sizes="192x192" href="My_icon_192x192">
   <script>
-function onoff(x) {
-  document.getElementById("moi").innerHTML = "Off";
-  document.getElementById("toi").innerHTML = "On";
+    var buttonstate=1;
+function onoff(element) {
+//document.getElementById("moi").innerHTML = "Off";
+  buttonstate= buttonstate - 1;
+  var blabel;
+  if(buttonstate)
+  {
+    blabel="on";
+  }
+  else
+  {
+    blabel="off";
+  }
+  var child=element.firstChild;
+  child.innerHTML=blabel;
+}
 }
 </script>
   </head>
