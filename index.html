@@ -15,7 +15,7 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="images" sizes="192x192" href="My_icon_192x192">
   <script>
-function onoff(element) {
+function onoff(x) {
 document.getElementById("moi").innerHTML = "Off";
   if(document.getElementById("moi").innerHTML == "Off")
   {
@@ -37,7 +37,7 @@ document.getElementById("moi").innerHTML = "Off";
     <br>
     <br>
    <form>
-    <button class="onoff" onclick="onoff(this)"> id = "moi"<div>On</div></button>
+    <button id="moi" onclick="onoff(this)">On</button>
     <button type="button">Get Temperature</button>
     <br>
     <br>
