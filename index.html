@@ -19,9 +19,8 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="images" sizes="192x192" href="My_icon_192x192">
   <script>
-function MyFunction() {
-document.getElementById("moi").innerHTML = "Off";
-document.getElementById("moi").style.color = "red";
+function myFunction(moi) {
+moi.innerHTML = "Off";
 }
 </script>
   </head>
@@ -38,7 +37,7 @@ document.getElementById("moi").style.color = "red";
     <br>
     <br>
    <form>
-    <button style="background-color:green" id="moi" onclick="MyFunction()">On</button>
+    <button style="background-color:green" id="moi" onclick="myFunction()">On</button>
     <button type="button">Get Temperature</button>
     <br>
     <br>
