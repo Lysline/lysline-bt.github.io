@@ -25,8 +25,8 @@ body > form {
   font-family: Asap, sans-serif;
 }
 body > form > button{
-  font-size: 24px;
-  padding: 16px;
+ 
+  height:40px;
 }
 
 body > ul {
