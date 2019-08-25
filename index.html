@@ -23,12 +23,14 @@ function myFunction(x) {
 var state = document.getElementById("moi");
 if(state.value == "ON"){
 state.value = "OFF";
+ state.color = "red";
  
 return;
 }
 
 if(state.value == "OFF"){
 state.value = "ON";
+ state.color = "green";
 return;
 }
 }
@@ -47,7 +49,7 @@ return;
     <br>
     <br>
    <form>
-    <input type="button" id="moi" onclick="myFunction(this)">On</input>
+    <input type="button" id="moi" onclick="myFunction(this)" value = "ON"></input>
     <button type="button">Get Temperature</button>
     <br>
     <br>
