@@ -29,6 +29,8 @@ return;
 
 if(state.value == "OFF"){
 state.value = "ON";
+ state.style.color ="white"; 
+ state.style.background-color ="black"; 
 return;
 }
 }
@@ -48,7 +50,7 @@ return;
     <br>
    <form>
     <input type="button" id="moi" style="background-color:green;color:white;width:40px; height:40px;" onclick="myFunction(this)" value = "ON"></input>
-    <button type="button" style="height:40px;">Get Temperature</button>
+    <button type="button">Get Temperature</button>
     <br>
     <br>
      <label for="temp">value:    
