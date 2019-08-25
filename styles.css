@@ -28,6 +28,10 @@ body > form > button{
   font-size: 20px;
   padding: 16px;
 }
+body > form > input{
+  font-size: 20px;
+  padding: 16px;
+}
 
 body > ul {
   list-style-type: none;
