@@ -20,18 +20,23 @@
     <link rel="images" sizes="192x192" href="My_icon_192x192">
   <script>
 function myFunction(x) {
-var state = document.getElementById("moi");
-if(state.value == "ON"){
-state.value = "OFF";
-state.style.color ="red"; 
-return;
+ var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+   var state = document.getElementById("moi");
+   if(state.value == "ON"){
+   state.value = "OFF";
+   state.style.color ="red"; 
+   return;
 }
-
 if(state.value == "OFF"){
 state.value = "ON";
  state.style.color ="green"; 
 return;
 }
+  };
+  xhttp.open("GET", "ajax_info.txt", true);
+  xhttp.send();
+
 }
 </script>
   </head>
