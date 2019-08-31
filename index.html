@@ -27,16 +27,15 @@ function myFunction(x) {
    state.value = "OFF";
    state.style.color ="red"; 
    return;
-}
-if(state.value == "OFF"){
-state.value = "ON";
- state.style.color ="green"; 
-return;
-}
+   }
+   if(state.value == "OFF"){
+   state.value = "ON";
+   state.style.color ="green"; 
+   return;
+   }
   };
-  xhttp.open("GET", "ajax_info.txt", true);
+  xhttp.open("GET", "state_change", true);
   xhttp.send();
-
 }
 </script>
   </head>
