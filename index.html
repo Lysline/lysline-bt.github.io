@@ -20,8 +20,6 @@
     <link rel="images" sizes="192x192" href="My_icon_192x192">
   <script>
 function myFunction(x) {
- var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
    var state = document.getElementById("moi");
    if(state.value == "ON"){
    state.value = "OFF";
@@ -33,9 +31,13 @@ function myFunction(x) {
    state.style.color ="green"; 
    return;
    }
-  };
+}
+function LoadMotor(x){
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
   xhttp.open("GET", "state_change", true);
   xhttp.send();
+}
 }
 </script>
   </head>
@@ -44,7 +46,7 @@ function myFunction(x) {
       <h1>Welcome</h1>
     </header>
   <ul>
-   <li><a href="https://lysline.github.io/">motor</a></li>
+   <li><a id="m" href="https://lysline.github.io/">motor</a></li>
    <li><a href="https://lysline.github.io">Temperature</a></li>
    <li><a href="https://lysline.github.io">light</a></li>
    <li><a href="https://lysline.github.io">pression</a></li>
