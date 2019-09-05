@@ -18,11 +18,20 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="manifest" href="/manifest.json">
     <link rel="images" sizes="192x192" href="My_icon_192x192">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script>
   $(document).ready(function(){
   $("button").click(function(){
     $url= "https://github.com/Lysline/lysline.github.io/blob/master/README.md"
       if (status == "success"){
+        $.post("https://github.com/Lysline/lysline.github.io/blob/master/README.md",
+    {
+      salut
+    },
+    function(data,status){
+      alert("Data: " + data + "\nStatus: " + status);
+    });
        var text = document.getElementById("ajaxtext");
        GET = content_where_id_ajaxtext;
       } else {
