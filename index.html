@@ -19,12 +19,25 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="images" sizes="192x192" href="My_icon_192x192">
   <script>
-
+  $(document).ready(function(){
+  $("button").click(function(){
+    $url= ""
+      if (status == "success"){
+       var text = document.getElementById("ajaxtext");
+       GET = content_where_id_ajaxtext;
+        });
+      } else {
+        $("div").html("An error occured:)
+      }
+    });
+  });
+});
    function myFunction(x) {
    var state = document.getElementById("moi");
    if(state.value == "ON"){
    state.value = "OFF";
    state.style.color ="red"; 
+    
    return;
    }
    if(state.value == "OFF"){
@@ -57,7 +70,7 @@ function LoadMotor(x){
    <form>
     <input type="button" id="moi" style="color:white;width:40px; height:40px;" onclick="myFunction(this)" value = "OFF"></input>
    
-    <button type="button">Get Temperature</button>
+    <button id="t" type="button">Get Temperature</button>
     <br>
     <br>
      <label for="temp">value:    
@@ -66,6 +79,7 @@ function LoadMotor(x){
    </label>
  
    </form>
+   <div id="ajaxtest" ></div>
    <script src="app.js" charset="utf-8"></script>
    <script src="javascript.js" charset="utf-8"></script>
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
