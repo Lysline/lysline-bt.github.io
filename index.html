@@ -23,13 +23,13 @@
   <script>
  //"https://github.com/Lysline/lysline.github.io/blob/master/README.md"
    
-   function ajaxFunktion(x){
+   function ajaxFunktion(){
       $.ajax({
                    url : 'https://www.simkhaa.com/polinawilke.php',
                    type : 'POST',
                    success : function(data){
                    
-                        document.getElementById("ajaxtext").innerHTML = data;
+                        document.getElementById("ajaxtest").innerHTML = data;
                    },
                    error : function(){
                    },
