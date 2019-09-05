@@ -21,24 +21,28 @@
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script>
-  $(document).ready(function(){
-  $("button").click(function(){
-    $url= "https://github.com/Lysline/lysline.github.io/blob/master/README.md"
-      if (status == "success"){
-        $.post("https://github.com/Lysline/lysline.github.io/blob/master/README.md",
-    {
-      salut
-    },
-    function(data,status){
-      alert("Data: " + data + "\nStatus: " + status);
-    });
-       var text = document.getElementById("ajaxtext");
-       GET = content_where_id_ajaxtext;
-      } else {
-        $("div").html("An error occured:)
-      }
-    });
-  });
+ //"https://github.com/Lysline/lysline.github.io/blob/master/README.md"
+   
+   function ajaxFunktion(x){
+      $.ajax({
+                   url : 'https://www.simkhaa.com/polinawilke.php',
+                   type : 'POST',
+                   success : function(data){
+                   
+                        document.getElementById("ajaxtext").innerHTML = data;
+
+  
+                   },
+                   error : function(){
+
+
+                   },
+                   complete : function(){
+
+                   }
+   }
+   
+   
    function myFunction(x) {
    var state = document.getElementById("moi");
    if(state.value == "ON"){
@@ -77,7 +81,7 @@ function LoadMotor(x){
    <form>
     <input type="button" id="moi" style="color:white;width:40px; height:40px;" onclick="myFunction(this)" value = "OFF"></input>
    
-    <button id="t" type="button">Get Temperature</button>
+    <button id="t" type="button" onclick="ajaxFunktion(this)" >Get Temperature</button>
     <br>
     <br>
      <label for="temp">value:    
