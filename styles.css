@@ -24,11 +24,12 @@ body > form {
   text-align: center;
   font-family: Asap, sans-serif;
 }
-body > form > button{
- 
+body > button {
+  color: #255272E;
+  text-align: center;
+  font-family: Asap, sans-serif;
   height:40px;
 }
-
 body > ul {
   list-style-type: none;
   margin: 0;
