@@ -29,6 +29,7 @@ body > button {
   text-align: center;
   font-family: Asap, sans-serif;
   height:40px;
+   float: center;
 }
 body > ul {
   list-style-type: none;
