@@ -44,7 +44,7 @@ function LoadMotor(x){
       url : 'https://www.simkhaa.com/polinawilke.php',
       type : 'POST',
       success : function(data){
-           document.getElementById("ajax").innerHTML = data;
+           document.getElementById("temp").innerHTML = data;
            return data;
            },
       error : function(){
@@ -82,7 +82,7 @@ function LoadMotor(x){
    <br>
    <br>
     <label for="temp">value:    
-    <input id="temp" name="temp"> °C </label>
+    <p id="temp"> Hier </p> °C </label>
     <button id="button" onclick="ajaxFunction(this)">Get Temperature</button>
      <p id="ajax">Wert hier</p>
    </form>
