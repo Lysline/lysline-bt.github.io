@@ -19,23 +19,6 @@
   
   <script>
    
-   function ajaxFunction(){
-      $.ajax({
-                   url : 'https://www.simkhaa.com/polinawilke.php',
-                   type : 'POST',
-                   success : function(data){
-                   
-                        document.getElementById("ajax").innerHTML = data;
-                   },
-                   error : function(){
-                   },
-                   complete : function(){
-
-                   }
-     })
-    return;
-   }
-   
    function myFunction(x) {
    var state = document.getElementById("moi");
    if(state.value == "ON"){
@@ -56,6 +39,24 @@ function LoadMotor(x){
   xhttp.send();
 }
 }
+   
+     function ajaxFunction(){
+      $.ajax({
+                   url : 'https://www.simkhaa.com/polinawilke.php',
+                   type : 'POST',
+                   success : function(data){
+                   
+                        document.getElementById("ajax").innerHTML = data;
+                   },
+                   error : function(){
+                   },
+                   complete : function(){
+                    
+
+                   }
+     })
+   }
+   
 </script>
   
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
@@ -78,13 +79,16 @@ function LoadMotor(x){
     <input type="button" id="moi" style="color:white;width:40px; height:40px;" onclick="myFunction(this)" value = "OFF"></input>
    
     <button id="button" onclick="ajaxFunction(this)">Get Temperature</button>
-    <p id="ajax">val</p>
-    <br>
-    <br>
-     <label for="temp">value:    
+   
+    <label>
+    <p id="ajax">Temperature Wert wird hier ausgegeben</p> °C
+    </label>
+   
+    <label for="temp">value:    
     <input id="temp" name="temp"> °C
          
    </label>
+   
    </form>
  
    <script src="app.js" charset="utf-8"></script>
