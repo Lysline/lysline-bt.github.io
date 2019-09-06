@@ -57,7 +57,11 @@ function LoadMotor(x){
 </script>
   
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-  
+  <script src="app.js" charset="utf-8"></script>
+  <script src="javascript.js" charset="utf-8"></script>
+<!--   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> -->
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="https://d3js.org/d3.v5.js"></script>
   </head>
  
   <body>
@@ -82,17 +86,10 @@ function LoadMotor(x){
    <br>
     <label for="temp">value:    
     <input id="temp" name="temp"> °C </label>
-   
-   </form>
- 
-   <script src="app.js" charset="utf-8"></script>
-   <script src="javascript.js" charset="utf-8"></script>
-<!--   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> -->
-   <script type="text/javascript" src="js/materialize.min.js"></script>
-   <script src="https://d3js.org/d3.v5.js"></script>
-  
-  <button id="button" onclick="ajaxFunction(this)">Ajax Call</button>
+     <button id="button" onclick="ajaxFunction(this)">Ajax Call</button>
    <p id="ajax">Wert hier</p>
+   </form>
+
  
   </body>
  
