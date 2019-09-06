@@ -46,7 +46,8 @@ function LoadMotor(x){
                    type : 'POST',
                    success : function(data){
                    
-                        document.getElementById("ajax").innerHTML = data;
+                        document.getElementById("temp").innerHTML = data;
+                    return;
                    },
                    error : function(){
                    },
