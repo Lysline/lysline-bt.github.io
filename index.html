@@ -46,10 +46,6 @@ function LoadMotor(x){
       success : function(data){
            var obj = JSON.parse(data);
            document.getElementById("ajax").innerHTML = JSON.parse(obj).name;
-          alert(obj);
-          
-           // var obj = JSON.parse(data);
-           // return data;
            },
       error : function(){
            },
