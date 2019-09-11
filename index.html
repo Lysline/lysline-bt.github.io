@@ -45,7 +45,12 @@ function LoadMotor(x){
       type : 'POST',
       success : function(data){
            var obj = JSON.parse(data);
+          alert(data);
+          alert(obj);
+          alert(obj.name);
+          alert(data.name);
            document.getElementById("ajax").innerHTML = data;
+          
            // var obj = JSON.parse(data);
            // return data;
            },
