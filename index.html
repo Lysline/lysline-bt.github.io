@@ -45,7 +45,7 @@ function LoadMotor(x){
       type : 'POST',
       success : function(data){
            var obj = JSON.parse(data);
-           document.getElementById("ajax").innerHTML = obj.name;
+           document.getElementById("ajax").innerHTML = obj[1].name;
            // var obj = JSON.parse(data);
            // return data;
            },
