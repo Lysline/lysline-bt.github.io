@@ -44,8 +44,10 @@ function LoadMotor(x){
       url : 'https://www.simkhaa.com/polinawilke.php',
       type : 'POST',
       success : function(data){
-           document.getElementById("ajax").innerHTML = data;
-           return data;
+           var obj = JSON.parse(data);
+           document.getElementById("ajax").innerHTML = obj.name;
+           // var obj = JSON.parse(data);
+           // return data;
            },
       error : function(){
            },
