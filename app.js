@@ -13,6 +13,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
 });
  
 //button click event to show the promt
+/*
 btn.addEventListener('click', (e) => {
   // hide our user interface that shows our button
   btn.style.display = 'none';
@@ -29,7 +30,7 @@ btn.addEventListener('click', (e) => {
       deferredPrompt = null;
     });
 });
-
+*/
 if('serviceWorker' in navigator){
   console.log('Service Worker supported');
   window.addEventListener('load', () => {
