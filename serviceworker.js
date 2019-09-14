@@ -44,6 +44,7 @@ self.addEventListener('fetch', e => {
     console.log(result);
   });
   
+  
   const title = 'Simple Title';
   const options = {
   body: 'Simple piece of body text.\nSecond line of body text :)'
