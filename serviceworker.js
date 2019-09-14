@@ -39,6 +39,7 @@ self.addEventListener('activate', e => {
 //Call Fetch Event
 self.addEventListener('fetch', e => {
   console.log('Service Worker: Fetching');
+  alert(bonjour);
   e.respondWith(
     fetch(e.request).catch(() => caches.match(e.request)))
 });
