@@ -19,25 +19,6 @@ e.waitUntil(
     .then(() => self.skipWaiting())
   );
 });
-
-/*
-self.oninstall = function(event){
-  event.waitUntil(  caches.open('static')
-    .then(function(cache) {
-      cache.addAll([
-      //  '/',
-        'index.html',
-        'app.js',
-        'style.css',
-        'https://fonts.googleapis.com/css?family=Tangerine',
-        'images/My_icon_192x192'
-      //  'https://console.cloud.google.com/apis/library?pli=1'
-      ]);
-
-    })
-
-  );
-};*/
 self.addEventListener('activate', e => {
   console.log('Service Worker: Activated');
   // Remove unwanted caches
@@ -54,22 +35,7 @@ self.addEventListener('activate', e => {
 })
 );*/
 });
-/*
-self.onactivate = function(){
-  console.log('activated!');
-}
-self.onfetch = function(event){
-  event.respondWith(
-    caches.match(event.request)
-    .then(function(response){
-      if(response){
-        return response;
-      }else{
-        return fetch(event.request);
-      }
-    })
-  );
-};*/
+
 //Call Fetch Event
 self.addEventListener('fetch', e => {
   console.log('Service Worker: Fetching');
