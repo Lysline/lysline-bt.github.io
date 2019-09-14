@@ -7,15 +7,18 @@
     <meta name="My_First_PWA" content="My_First_PWA">
     <meta name="theme-color" content="#64b4fe">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="Description" content="Stay motivated!">
-    
-  <title>Hello World</title>
-      
+    <meta name="Description" content="Stay motivated!">  
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link rel="stylesheet" href="styles.css">
     <link rel="manifest" href="/manifest.json">
     <link rel="images" sizes="192x192" href="My_icon_192x192">
+  
+  <script>
+    if(navigator.serviceWorker){
+      navigator.serviceWorker.register('serviceworker.js');
+    }
+  </script>
   
   <script>
    
@@ -91,10 +94,6 @@ function LoadMotor(x){
    </div>
   </body>
  
-  <script>
-    if(navigator.serviceWorker){
-      navigator.serviceWorker.register('serviceworker.js');
-    }
-  </script>
+ 
 
 </html>
