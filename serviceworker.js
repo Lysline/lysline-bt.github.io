@@ -39,6 +39,11 @@ self.addEventListener('activate', e => {
 //Call Fetch Event
 self.addEventListener('fetch', e => {
   console.log('Service Worker: Fetching');
+  const title = 'Simple Title';
+const options = {
+  body: 'Simple piece of body text.\nSecond line of body text :)'
+};
+registration.showNotification(title, options);
   e.respondWith(
     fetch(e.request).catch(() => caches.match(e.request)))
 });
