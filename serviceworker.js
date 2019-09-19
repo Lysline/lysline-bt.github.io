@@ -34,27 +34,6 @@ self.addEventListener('activate', e => {
   );
 })
 );*/
-});
-/*
-//Call Fetch Event
-self.addEventListener('fetch', e => {
-  console.log('Service Worker: Fetching');
-  
-    Notification.requestPermission().then(function(result) {
-    console.log(result);
-  });
-  
-  
-  const title = 'Simple Title';
-  const options = {
-  body: 'Simple piece of body text.\nSecond line of body text :)'
-};
-registration.showNotification(title, options);
-  
-  e.respondWith(
-    fetch(e.request).catch(() => caches.match(e.request)))
-});
-*/
 //https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers
 // Service Worker make the page offline accessible 
 self.addEventListener('fetch', (e) => {
