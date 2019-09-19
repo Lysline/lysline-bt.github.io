@@ -39,7 +39,8 @@ self.addEventListener('activate', e => {
 // Service Worker make the page offline accessible 
 
 self.addEventListener('fetch', (e) => {
-  e.respondWith(
+    console.log('[Service Worker] Fetched resource '+e.request.url);
+   e.respondWith(
     caches.match(e.request).then((r) => {
           console.log('[Service Worker] Fetching resource: '+e.request.url);
       return r || fetch(e.request).then((response) => {
