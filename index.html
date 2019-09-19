@@ -13,16 +13,53 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="images" sizes="192x192" href="My_icon_192x192">
   
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script>
+     // Pushnotification
+        MsgElem = document.getElementById("msg")
+        TokenElem = document.getElementById("token")
+        NotisElem = document.getElementById("notis")
+        ErrElem = document.getElementById("err")
+        // Initialize Firebase
+        // TODO: Replace with your project's customized code snippet
+        var config = {
+            apiKey: "AIzaSyAAEVzXsssgFQkfv8YRw_-IPzfy5CHzvCY",
+            authDomain: "pushmessagefb.firebaseapp.com",
+            databaseURL: "https://pushmessagefb.firebaseio.com",
+            storageBucket: "pushmessagefb.appspot.com",
+            messagingSenderId: "806850983086",
+        };
+        firebase.initializeApp(config);
+
+        const messaging = firebase.messaging();
+        messaging
+            .requestPermission()
+            .then(function () {
+                MsgElem.innerHTML = "Notification permission granted." 
+                console.log("Notification permission granted.");
+
+                // get the token in the form of promise
+                return messaging.getToken()
+            })
+            .then(function(token) {
+                TokenElem.innerHTML = "token is : " + token
+            })
+            .catch(function (err) {
+                ErrElem.innerHTML =  ErrElem.innerHTML + "; " + err
+                console.log("Unable to get permission to notify.", err);
+            });
+
+        messaging.onMessage(function(payload) {
+            console.log("Message received. ", payload);
+            NotisElem.innerHTML = NotisElem.innerHTML + JSON.stringify(payload) 
+        });
+    </script>
+  
   <script>
+   //  Page Offline accessible 
+   
     if(navigator.serviceWorker){
       navigator.serviceWorker.register('serviceworker.js');
-     Notification.requestPermission(function(result) {
-    if (result === 'granted') {
-    navigator.serviceWorker.ready.then(function(registration) {
-      registration.showNotification('Notification with ServiceWorker');
-    });
-  }
-});
     }
   </script>
   
@@ -78,6 +115,10 @@ function LoadMotor(x){
     <header>
       <h1>Welcome</h1>
     </header>
+    <div id="token"></div>
+    <div id="msg"></div>
+    <div id="notis"></div>
+    <div id="err"></div>
   <ul>
    <li><a id="m" href="https://lysline.github.io/">motor</a></li>
    <li><a href="https://lysline.github.io">Temperature</a></li>
