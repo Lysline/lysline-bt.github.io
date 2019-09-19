@@ -21,6 +21,7 @@ e.waitUntil(
 });
 self.addEventListener('activate', e => {
   console.log('Service Worker: Activated');
+});
   // Remove unwanted caches
 /*  e.waitUntil(
     caches.keys().then(cacheNames => {
