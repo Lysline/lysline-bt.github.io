@@ -38,7 +38,7 @@ self.addEventListener('activate', e => {
 
 self.addEventListener('fetch', (e) => {
     console.log('[Service Worker] Fetched resource '+e.request.url);
- /*  e.respondWith(
+   e.respondWith(
     caches.match(e.request).then((r) => {
           console.log('[Service Worker] Fetching resource: '+e.request.url);
       return r || fetch(e.request).then((response) => {
@@ -49,5 +49,5 @@ self.addEventListener('fetch', (e) => {
         });
       });
     })
-  ); */
+  ); 
 });
