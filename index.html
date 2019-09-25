@@ -89,9 +89,24 @@ function LoadMotor(x){
   xhttp.send();
 }
 }
-     function ajaxFunction(){
+     function ajax2Function(){
       $.ajax({
       url : 'https://www.simkhaa.com/polinawilke.php',
+      type : 'POST',
+      success : function(data){
+           var obj = JSON.parse(data);
+          document.getElementById("ajax").innerHTML = JSON.parse(obj).name;
+          // document.getElementById("ajax").innerHTML = obj;
+           },
+      error : function(){
+           },
+      complete : function(){
+           }
+     })
+  } 
+   function ajaxFunction(){
+      $.ajax({
+      url : '192.168.240.1/arduino/TasActor_1',
       type : 'POST',
       success : function(data){
            var obj = JSON.parse(data);
