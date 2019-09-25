@@ -110,11 +110,14 @@ function LoadMotor(x){
       url : '192.168.240.1/arduino/TasActor_1',
       type : 'POST',
       success : function(data){
+       alert("good");
            var obj = JSON.parse(data);
           document.getElementById("ajax").innerHTML = JSON.parse(obj).name;
           // document.getElementById("ajax").innerHTML = obj;
+       alert("good 2");
            },
       error : function(){
+       alert("bad");
            },
       complete : function(){
            }
