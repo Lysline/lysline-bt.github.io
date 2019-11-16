@@ -42,13 +42,6 @@
    return;
    }
 }
-function LoadMotor(x){
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-  xhttp.open("GET", "state_change", true);
-  xhttp.send();
-}
-}
      function ajax2Function(){
       $.ajax({
       url : 'https://www.simkhaa.com/polinawilke.php',
@@ -152,10 +145,6 @@ function LoadMotor(x){
     &nbsp
     <p id="ajax">Ausgabe hier!</p>
    </div>
-   <div id="token"></div>
-   <div id="msg"></div>
-   <div id="notis"></div>
-   <div id="err"></div>
    <div ng-controller="ArduinoCtrl" class="container">
         <button ng-click="allumage()" class="btn">Allumer</button>
         <button ng-click="extinction()" class="btn">Eteindre</button>
