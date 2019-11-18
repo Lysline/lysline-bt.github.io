@@ -88,10 +88,10 @@
 
 <body>
     <div ng-controller="ArduinoCtrl" class="container">
-        <button ng-click="allumage()" class="btn">Allumer</button>
-        <button ng-click="extinction()" class="btn">Eteindre</button>
-		<button ng-click="extinction()" onclick= "getTemp()" class="btn">get Temperature</button>
-		<input id="temp" ></input> <b>°C</b>
+        <button ng-click="allumage()" style="color:green;text-align:center"> class="btn">Allumer</button>
+        <button ng-click="extinction()" style="color:red;text-align:center"> class="btn">Eteindre</button>
+		<br><button ng-onclick= "getTemp()" class="btn">get Temperature</button>
+		<input id="temp" style="width: 15%" ></input> <b>°C</b>
        
     </div>
 </body>
