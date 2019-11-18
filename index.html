@@ -20,6 +20,14 @@
     <script src="jquery-1.12.4.min.js"></script>
 
 </head>
+	 
+  <script>
+   //  Page Offline accessible 
+   
+    if(navigator.serviceWorker){
+      navigator.serviceWorker.register('serviceworker.js');
+    }
+  </script>
 
 <script>
 
@@ -87,12 +95,12 @@
 </script>
 
 <body>
-    <div ng-controller="ArduinoCtrl" class="container">
-        <button ng-click="allumage()" style="color:green;text-align:center"> class="btn">Allumer</button>
-        <button ng-click="extinction()" style="color:red;text-align:center"> class="btn">Eteindre</button>
+    <div ng-controller="ArduinoCtrl" class="container" style = "text-align: center">
+        <button ng-click="allumage()" style="color:green" class="btn">Allumer</button>
+        <button ng-click="extinction()" style="color:red" class="btn">Eteindre</button>
 		<br><button ng-onclick= "getTemp()" class="btn">get Temperature</button>
-		<input id="temp" style="width: 15%" ></input> <b>°C</b>
-       
+		<input id="temp" style="width: 10%" ></input> <b>°C</b>
+	   
     </div>
 </body>
 </html>
