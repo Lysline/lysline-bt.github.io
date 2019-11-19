@@ -3,7 +3,6 @@
 const cacheName ='me';
 
 const cacheAssets=[
-  'index.html',
   'styles.css',
   'app.js'
 ];
