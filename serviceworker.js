@@ -34,6 +34,8 @@ self.addEventListener('activate', e => {
           }
     })
   ); 
+})
+);
 });
 // Fetch Event 
 
