@@ -29,15 +29,8 @@
   $pdo = new PDO('mysql:host=85.214.194.142;dbname=sensordaten', 'root', '');
   $akt = new PDO('mysql:host=85.214.194.142;dbname=aktorcmd', 'root', '');
 
-$ergebnis = $pdo->query("SELECT * FROM dht11 WHERE id=1");
+  $ergebnis = $pdo->query("SELECT * FROM dht11 WHERE id=1");
 
-//$akt->exec("INSERT INTO lampen (spalte1,spalte2,spalte3) VALUES ('wichtig','hier',100)");
-
-
-/*foreach ($ergebnis as $ds) {
-    echo ($ds[0].' '.$ds[1].' '.$ds[2]."\n");
-}
-*/
 foreach ($ergebnis as $ds) {
 }
 
