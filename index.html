@@ -26,8 +26,8 @@
 
 <?php
 
-  $pdo = new PDO('mysql:host=localhost;dbname=sensordaten', 'root', '');
-  $akt = new PDO('mysql:host=localhost;dbname=aktorcmd', 'root', '');
+  $pdo = new PDO('mysql:host=85.214.194.142;dbname=sensordaten', 'root', '');
+  $akt = new PDO('mysql:host=85.214.194.142;dbname=aktorcmd', 'root', '');
 
 $ergebnis = $pdo->query("SELECT * FROM dht11 WHERE id=1");
 
