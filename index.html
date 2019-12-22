@@ -1,10 +1,11 @@
 <!--Autor: Lysline Tchounda-->
 <!doctype html>
-<html lang="en" ng-app>
+<html>
+
 <head>
     <meta charset="utf-8">
 
-    <title>PWA/ArduinoYun</title>
+    <title>PWA_Mysql</title>
     <meta name="PWAYUN" content="yes">
     <meta name="PWAYUN" content="PWAYUN">
     <meta name="theme-color" content="#64b4fe">
@@ -21,80 +22,68 @@
 
 </head>
 
-<script>
-
-	
-
-    function ArduinoCtrl($scope,
-                         $http)
-    {
-
-        $scope.allumage = function() {
-		
-		
-			
-			  $http({
-				  method: 'GET',
-				  url: 'https://192.168.1.39/arduino/TasActor_01/Ein_Aus/HIGH'
-				 // url: 'http://192.168.1.33/data/get/'
-				}).then(function successCallback(response) {
-					// this callback will be called asynchronously
-					// when the response is available
-					// alert("ok.... c du bon");
-				  }, function errorCallback(response) {
-					// called asynchronously if an error occurs
-					// or server returns response with an error status.
-					alert("err...");
-				  });
-				   
-        }
-		
-		$scope.extinction = function() {
-		
-		
-			
-			  $http({
-				  method: 'GET',
-				  url: 'https://192.168.1.39/arduino/TasActor_01/Ein_Aus/LOW'
-				 // url: 'http://192.168.1.33/data/get/'
-				}).then(function successCallback(response) {
-					// this callback will be called asynchronously
-					// when the response is available
-					// alert("ok.... c du bon");
-				  }, function errorCallback(response) {
-					// called asynchronously if an error occurs
-					// or server returns response with an error status.
-					alert("err...");
-				  });
-				   
-        }
-
-    }
-	
-	function getTemp(){
-	   var element1 = document.getElementById('temp');
-	   
-	   				  $.ajax({
-						url: "https://192.168.1.39/data/get/",
-						dataType: "jsonp",
-						jsonp: 'jsonp',
-					}).done(function(e) {
-
-						 element1.value = e.value.keyTasSensor_01;
-					}); 
-	}
-
-</script>
-
 <body>
-	 <h1 style = "text-align: center" >Welcome to PWA/YUN!</h1>
-    <div ng-controller="ArduinoCtrl" class="container" style = "text-align: center;  padding: 40px 80px; display: block; height: 60px">
-        <button ng-click="allumage()" style="background-color:green; font-size: 40px; width: 90%" class="btn">Allumer</button>
-       <br><br> <button ng-click="extinction()" style="background-color:red; font-size: 40px; width: 90%" class="btn">Eteindre</button>
-		<br><br><button ng-onclick= "getTemp()" style="font-size: 25px; width: 90%" class="btn">get Temperature</button>
-	   <br><br> <input id="temp" style="font-size: 25px; width: 30%" ></input> <b style="font-size: 25px; width: 30%">°C</b>
-	   
-    </div>
-	<script src="sw.js"></script>
+
+<?php
+
+  $pdo = new PDO('mysql:host=localhost;dbname=sensordaten', 'root', '');
+  $akt = new PDO('mysql:host=localhost;dbname=aktorcmd', 'root', '');
+
+$ergebnis = $pdo->query("SELECT * FROM dht11 WHERE id=1");
+
+//$akt->exec("INSERT INTO lampen (spalte1,spalte2,spalte3) VALUES ('wichtig','hier',100)");
+
+
+/*foreach ($ergebnis as $ds) {
+    echo ($ds[0].' '.$ds[1].' '.$ds[2]."\n");
+}
+*/
+foreach ($ergebnis as $ds) {
+}
+
+?>
+<script>
+function getTemp() {
+	var elem =<?php echo ($ds[1]); ?> ;
+  document.getElementById("t").value = elem;
+}
+</script>
+<script>
+function setAn() {
+<?php  
+  $akt->exec("INSERT INTO lampen(lampe1, lampe2) VALUES (1, 1)"); 
+  $ergan = $akt->query("SELECT * FROM lampen");
+  foreach ($ergan as $ds) {
+}
+?>
+
+	var elem =<?php echo ($ds[0]); ?> ;
+  document.getElementById("a").value = elem;
+}
+function setAus() {
+<?php  
+  $akt->exec("INSERT INTO lampen(lampe1, lampe2) VALUES (0, 0)"); 
+  $ergan = $akt->query("SELECT * FROM lampen");
+  foreach ($ergan as $ds) {
+}
+?>
+
+	var elem =<?php echo ($ds[0]); ?> ;
+  document.getElementById("o").value = elem;
+}
+</script>
+<h1 style = "text-align: center" >Welcome to PWA/YUN!</h1>
+<div  style = "text-align: center;  padding: 40px 80px; display: block; height: 60px">
+<button onclick="getTemp()" style="font-size: 25px; width: 90%">temp</button>
+<input type="text" id="t""><br>
+<button onclick="setAn()" style="background-color:green; font-size: 40px; width: 90%">ON</button>
+<input type="text" id="a""><br>
+<button onclick="setAus()" style="background-color:red; font-size: 40px; width: 90%" >Off</button>
+<input type="text" id="o""><br>
+</div>
+ 
+ <script src="sw.js"></script>
+ 
+ 
 </body>
 </html>
